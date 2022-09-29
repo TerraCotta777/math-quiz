@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+  </head>
+  <body class="page">
+    <header class="header">
+      <h1 class="header__title">Math Quiz</h1>
+    </header>
+
+    <div class="alert"></div>
+    <form class="form">
+      <label class="body" for="nameInput">Ваше имя</label>
+      <input class="form__name-input" type="text" id="nameInput" />
+      <h4>Выберите режим игры</h4>
+      <label
+        >Режим 'Practice'
+        <input
+          class="form__game-mode"
+          type="radio"
+          checked="checked"
+          name="radio"
+        />
+        <span class="checkmark"></span>
+      </label>
+      <label class="container"
+        >Режим 'Time Attack'
+        <input class="form__game-mode" type="radio" name="radio" />
+        <span class="checkmark"></span>
+      </label>
+
+      <button type="button">Начать игру</button>
+    </form>
+    <a href="./table.html">Таблица лидеров</a>
+    <button type="button">Правила</button>
+  </body>
+</html>
