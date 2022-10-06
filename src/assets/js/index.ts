@@ -1,11 +1,25 @@
+import { User } from "./types";
+import anime from "animejs";
 import { alertMessage, form, nameInput } from "./tag-variables";
 import "../scss/main.scss";
 
-nameInput.value = localStorage.getItem("lastUser")
-  ? JSON.parse(localStorage.getItem("lastUser")!).username
+anime({
+  targets: "#math-quiz path",
+  strokeDashoffset: [anime.setDashoffset, 0],
+  easing: "easeInOutSine",
+  duration: 1200,
+  delay: function (el, i) {
+    return i === 0 ? i * 0 : i * 500;
+  },
+  direction: "alternate",
+  loop: false,
+});
+
+nameInput.value = localStorage.getItem("currentUser")
+  ? JSON.parse(localStorage.getItem("currentUser")!).username
   : "";
 
-const lastUser = {
+const currentUser: User = {
   username: "",
   gameMode: "practice",
   right: 0,
@@ -22,11 +36,11 @@ form.addEventListener("submit", (e) => {
 
   if (user) {
     alertMessage.textContent = "";
-    lastUser.username = user;
+    currentUser.username = user;
     if (gameMode[0].value === "time-attack") {
-      lastUser.gameMode = gameMode[0].value;
-    } else lastUser.gameMode = "practice";
-    localStorage.setItem("lastUser", JSON.stringify(lastUser));
+      currentUser.gameMode = gameMode[0].value;
+    } else currentUser.gameMode = "practice";
+    localStorage.setItem("currentUser", JSON.stringify(currentUser));
     window.location.href = "/game.html";
   } else {
     alertMessage.textContent = "Please provide your name";

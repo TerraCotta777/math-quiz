@@ -17,7 +17,7 @@ const sum = (a: number, b: number, operator: string) => {
 };
 
 const divideFunc = (): number[] => {
-  const dividend = getRandom(1, 100);
+  const dividend = getRandom(1, 50);
   let divider = 1;
   const factorsArr = factors(dividend);
   if (factorsArr.length > 0) {
@@ -31,7 +31,7 @@ const divideFunc = (): number[] => {
 export const generateExample = () => {
   let num1 = getRandom(1, 10);
   let num2 = getRandom(1, 10);
-  const operator = operators[getRandom(3, 3)];
+  const operator = operators[getRandom(0, 3)];
   if (operator === "/") {
     [num1, num2] = divideFunc();
   } else {

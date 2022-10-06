@@ -10,6 +10,7 @@ export const startGameButton = form?.querySelector(
 
 
 // Variables from game page
+export const gameContainer = document.querySelector(".game") as HTMLDivElement;
 export const username = document.querySelector(".username") as HTMLDivElement;
 export const num1 = document.querySelector(".num-1") as HTMLDivElement;
 export const num2 = document.querySelector(".num-2") as HTMLDivElement;
@@ -26,3 +27,8 @@ export const score = document.querySelector('.score') as HTMLSpanElement;
 export const rightAnswers = document.querySelector('.right') as HTMLSpanElement;
 export const wrongAnswers = document.querySelector('.wrong') as HTMLSpanElement;
 export const usernameEndPage = document.querySelector('.username-end-page') as HTMLSpanElement;
+
+
+// Variables from table page
+export const practiceList = document.querySelector('.practice-leaders') as HTMLUListElement;
+export const timeAttackList = document.querySelector('.time-attack-leaders') as HTMLUListElement;

@@ -12,11 +12,7 @@
         background: #ecf0f1;
         font: 300 18px/18px Roboto, sans-serif;
       }
-      *,
-      :after,
-      :before {
-        box-sizing: border-box;
-      }
+
       .pull-left {
         float: left;
       }
@@ -39,6 +35,7 @@
         position: absolute;
       }
       .clock-wrap {
+        display: none;
         margin: auto;
         width: 240px;
         height: 240px;
@@ -48,6 +45,9 @@
         background-color: #fff;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
       }
+			.time-attack .clock-wrap {
+				display: block;
+			}
       .clock {
         top: 50%;
         left: 50%;
@@ -96,6 +96,7 @@
         text-align: center;
       }
       .count:after {
+        content: "sec";
         width: 100%;
         display: block;
         font-size: 18px;
@@ -104,67 +105,28 @@
         text-align: center;
         position: relative;
       }
-      .count.sec:after {
-        content: "sec";
-      }
-      .count.min:after {
-        content: "min";
-      }
-      .action {
-        margin: auto;
-        max-width: 200px;
-      }
-      .action .input {
-        margin-top: 30px;
-        position: relative;
-      }
-      .action .input-num {
-        width: 100%;
-        border: none;
-        padding: 12px;
-        border-radius: 60px;
-      }
-      .action .input-btn {
-        top: 0;
-        right: 0;
-        color: #fff;
-        border: none;
-        border: none;
-        padding: 12px;
-        position: absolute;
-        border-radius: 60px;
-        background-color: #ec366b;
-        text-transform: uppercase;
-      }
-      .tbl {
-        display: table;
-        width: 100%;
-      }
-      .tbl .col {
-        display: table-cell;
-      }
     </style>
   </head>
   <body>
-    <div class="username">username</div>
-    <div class="timer">
+    <div class="game">
+      <div class="username">username</div>
       <div class="clock-wrap">
         <div class="clock pro-0">
           <span class="count">90</span>
         </div>
       </div>
-    </div>
-    <main>
-      <div class="num-1">2</div>
-      <div class="operator">+</div>
-      <div class="num-2">4</div>
-      <div class="equal">=</div>
-      <input type="number" class="result" />
-    </main>
-    <div class="center">
-      <button class="stopButton">STOP</button>
-      <h3>Score:</h3>
-      <div class="win">0</div>
+      <main>
+        <div class="num-1">2</div>
+        <div class="operator">+</div>
+        <div class="num-2">4</div>
+        <div class="equal">=</div>
+        <input type="number" class="result" />
+      </main>
+      <div class="center">
+        <button class="stopButton">STOP</button>
+        <h3>Score:</h3>
+        <div class="win">0</div>
+      </div>
     </div>
   </body>
 </html>

@@ -6,10 +6,10 @@ import {
 } from "./tag-variables";
 import "../scss/main.scss";
 
-const lastUser = JSON.parse(localStorage.getItem("lastUser")!);
+const currentUser = JSON.parse(localStorage.getItem("currentUser")!);
 
-const scoreText = /[1-4]+$/.test(lastUser.score) ? 'очка' : 'очков'
-score.textContent = `${lastUser.score} ${scoreText}`;
-usernameEndPage.textContent = lastUser.username;
-rightAnswers.textContent = lastUser.right;
-wrongAnswers.textContent = lastUser.wrong;
+const scoreText = /[1-4]+$/.test(currentUser.score) ? "очка" : "очков";
+score.textContent = `${currentUser.score} ${scoreText}`;
+usernameEndPage.textContent = currentUser.username;
+rightAnswers.textContent = currentUser.right;
+wrongAnswers.textContent = currentUser.wrong;

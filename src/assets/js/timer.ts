@@ -1,5 +1,7 @@
-import { lastUser } from "./game";
-import { clock, stopButton, timerCount } from "./tag-variables";
+import { currentUser } from "./game";
+
+import { clock, gameContainer, stopButton, timerCount } from "./tag-variables";
+import { stopGame } from "./utils";
 
 export const timerFunc = () => {
   let sec = 90;
@@ -11,8 +13,9 @@ export const timerFunc = () => {
 
   let i = 0;
 
-  if (lastUser.gameMode === "time-attack") {
-    const timer: NodeJS.Timer = setInterval(() => {
+  if (currentUser.gameMode === "time-attack") {
+    gameContainer.classList.add("time-attack");
+    const timer = setInterval(() => {
       sec -= step;
       i++;
 
@@ -30,10 +33,11 @@ export const timerFunc = () => {
     }, 1000);
 
     stopButton.addEventListener("click", () => {
+      gameContainer.classList.remove("time-attack");
       clearInterval(timer);
       timerCount.textContent = "0";
       clock.removeAttribute("style");
-      window.location.href = "/end.html";
+      stopGame();
     });
   }
 };
