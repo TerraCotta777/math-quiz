@@ -32,7 +32,7 @@ form.addEventListener("submit", (e) => {
     currentUser.username = user;
     currentUser.gameMode = gameMode;
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
-    window.location.href = "/game.html";
+    window.location.href = "/rules.html";
   } else {
     alertMessage.style.display = "block";
     alertAnimation();

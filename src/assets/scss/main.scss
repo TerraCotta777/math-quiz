@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Paytone+One&family=Russo+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&family=Paytone+One&display=swap');
 
 @import "button";
 @import "index";
 @import "menu";
+@import "rules";
 
 @mixin outline {
   outline-color: #69e5ab;
@@ -41,6 +42,7 @@ a {
 main {
   position: fixed;
   top: 0;
+	left: 0;
   width: 100%;
   height: 100%;
   display: flex;
@@ -54,7 +56,7 @@ img {
 }
 
 input:focus-visible {
-	@include outline();
+  @include outline();
 }
 
 .page {

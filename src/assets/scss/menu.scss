@@ -46,10 +46,6 @@
     justify-content: center;
     align-items: center;
 
-    input {
-      appearance: none;
-    }
-
     @media (max-width: 768px) {
       flex-direction: column;
     }
@@ -89,9 +85,6 @@
     @media (max-width: 576px) {
       width: 75%;
     }
-  }
-
-  &__game-radio-input {
   }
 
   &__game-mode-name {

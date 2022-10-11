@@ -12,6 +12,9 @@ export const startGameButton = form?.querySelector(
   ".form__button"
 ) as HTMLButtonElement;
 
+// Variables from rules page
+export const rulesInfo = document.querySelector('.rules__block_mode-info') as HTMLDivElement;
+
 // Variables from game page
 export const gameContainer = document.querySelector(".game") as HTMLDivElement;
 export const username = document.querySelector(".username") as HTMLDivElement;
