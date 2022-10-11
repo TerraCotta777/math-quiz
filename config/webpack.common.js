@@ -19,6 +19,7 @@ module.exports = {
   },
   entry: {
     index: `${PATHS.src}/assets/js/index.ts`,
+    menu: `${PATHS.src}/assets/js/menu.ts`,
     game: `${PATHS.src}/assets/js/game.ts`,
     end: `${PATHS.src}/assets/js/end.ts`,
     table: `${PATHS.src}/assets/js/table.ts`,

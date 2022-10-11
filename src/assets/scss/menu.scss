@@ -1,0 +1,153 @@
+.menu {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__form {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .alert {
+    margin-bottom: 2vh;
+    display: none;
+    text-shadow: 5px 5px 0 #000;
+    -webkit-text-stroke: 1px #000;
+    font-size: 200%;
+    color: #fff;
+  }
+
+  .form__name {
+    width: 40vw;
+    height: 60px;
+    margin: 0 auto;
+    display: block;
+
+    @media (max-width: 576px) {
+      width: 80vw;
+    }
+  }
+
+  .form__name-input {
+    width: 100%;
+    height: 100%;
+    padding: 10px 2vw;
+    border: 0;
+    font-family: inherit;
+    font-size: 120%;
+  }
+
+  &__game-modes {
+    margin-top: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input {
+      appearance: none;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  &__game-mode {
+    width: 33%;
+    margin: 0 6vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.15s ease;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &:active {
+      box-shadow: 0px 0px 0px 0px;
+      top: 10px;
+      left: 10px;
+    }
+
+    &:focus-visible {
+      outline-color: #69e5ab;
+    }
+
+    @media (max-width: 768px) {
+      margin: 4vw 0;
+      width: 60%;
+    }
+
+    @media (max-width: 576px) {
+      width: 75%;
+    }
+  }
+
+  &__game-radio-input {
+  }
+
+  &__game-mode-name {
+    margin: 1vw 0.8vw;
+    display: block;
+    font-size: 130%;
+    flex-grow: 1;
+  }
+
+  &__img {
+    width: 10vw;
+    margin: 0.7vw auto;
+  }
+
+  &__go-button {
+    padding: 1vw 1vw;
+    width: 100%;
+    border-top: 0.27778vw solid #000;
+    text-transform: uppercase;
+    font-size: 130%;
+  }
+
+  .menu__leaderboard-link {
+    bottom: 0.5vw;
+    right: 1vw;
+
+    &:hover {
+      svg {
+        transform: translateX(30%);
+      }
+    }
+  }
+}
+
+.shaking {
+  animation: shaking 1s;
+}
+
+@keyframes shaking {
+  from {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(1.2);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
