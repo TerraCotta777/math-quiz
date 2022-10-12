@@ -36,7 +36,6 @@ const renderExample = (data: any) => {
   num1.textContent = data.num1;
   num2.textContent = data.num2;
   operator.textContent = data.operator;
-  console.log(data.num1, data.num2, data.result);
   result.focus();
 };
 

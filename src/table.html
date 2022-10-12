@@ -5,16 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Table</title>
-		<link rel="icon" type="image/x-icon" href="./assets/img/calculator.png">
+    <link rel="icon" type="image/x-icon" href="./assets/img/calculator.png" />
   </head>
-  <body>
-		<h3> Список игроков режима "Practice"</h3>
-    <ul class="practice-leaders">
-    </ul>
-		<h3> Список игроков режима "Time Attack"</h3>
-    <ul class="time-attack-leaders">
-     
-    </ul>
-    <a href="./index.html">Главное меню</a>
+  <body class="page table">
+    <video
+      class="video"
+      poster="./assets/img/poster-4.jpeg"
+      autoplay
+      loop
+      muted
+    >
+      <source src="./assets/video/background-img-4.mp4" type="video/mp4" />
+    </video>
+    <main class="table__wrapper">
+      <a class="back-link link" href="javascript:history.back()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20.018" height="18">
+          <path d="M10.018 18v-5h10V5h-10V0L0 8.939 10.018 18z" />
+        </svg>
+        Back
+      </a>
+      <button value="practice" class="table__subtitle active">
+        Practice leaders
+      </button>
+      <button value="time-attack" class="table__subtitle">
+        Time Attack leaders
+      </button>
+      <div class="table__board">
+        <ol class="table__practice white-card"></ol>
+        <ol class="table__time-attack white-card"></ol>
+      </div>
+      <a class="menu-link end__menu-link link" href="./menu.html"
+        >Menu
+        <svg xmlns="http://www.w3.org/2000/svg" width="19.99" height="18">
+          <path d="M10.029 5H0v7.967h10.029V18l9.961-9.048L10.029 0v5z" />
+        </svg>
+      </a>
+    </main>
   </body>
 </html>

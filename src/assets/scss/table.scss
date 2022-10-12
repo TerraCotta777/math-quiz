@@ -1,0 +1,64 @@
+.table {
+  &__wrapper {
+    padding: 2vw;
+    justify-content: center;
+  }
+
+  &__subtitle {
+		border: 0;
+    font-size: 150%;
+		background: transparent;
+		font-family: inherit;
+		transition: all 0.15s ease;
+		cursor: pointer;
+
+    &.active {
+      text-shadow: 6px 6px 0 #000;
+      -webkit-text-stroke: 1px #000;
+      font-size: 250%;
+      color: #fff;
+
+			&:hover {
+				color: #fff;
+			}
+    }
+
+		&:hover {
+			color: #69e5ab;
+		}
+  }
+
+	&__board {
+		height: 40vw;
+		margin-top: 5vw;
+		display: flex;
+	}
+
+	ol{
+		width: 60vw;
+		height: 100%;
+		padding: 2vw;
+		display: none;
+
+		&.active {
+			display: block;
+		}
+
+		.leader {
+			display: flex;
+			justify-content: space-around;
+			font-size: 150%;
+		}
+	}
+
+  .menu-link {
+    bottom: 0.5vw;
+    right: 1vw;
+
+    &:hover {
+      svg {
+        transform: translateX(30%);
+      }
+    }
+  }
+}
