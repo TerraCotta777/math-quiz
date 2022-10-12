@@ -61,9 +61,6 @@ const animateScore = (element: string) => {
   });
 };
 
-const scorePlus1 = document.querySelector(".win-plus") as HTMLDivElement;
-const scoreMinus1 = document.querySelector(".win-minus") as HTMLDivElement;
-
 let win = 0;
 let example = generateExample();
 renderExample(example);
