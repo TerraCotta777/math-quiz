@@ -1,0 +1,52 @@
+.end {
+  background-color: #69e5ab;
+
+  &__wrapper {
+    padding: 2vw;
+    justify-content: center;
+  }
+
+  &__title {
+    margin-bottom: 3vw;
+    // align-self: flex-start;
+    text-shadow: 6px 6px 0 #000;
+    -webkit-text-stroke: 1px #000;
+    font-size: 450%;
+    color: #fff;
+    text-align: center;
+
+    @media (max-width: 576px) {
+      font-size: 300%;
+      text-shadow: 5px 4px 0 #000;
+    }
+  }
+
+  &__subtitle {
+    font-size: 200%;
+		text-align: center;
+  }
+
+  &__answers {
+    margin-bottom: 3vw;
+    font-size: 150%;
+  }
+
+  .link {
+    bottom: 0.5vw;
+    right: 1vw;
+
+    &:hover {
+      svg {
+        transform: translateX(30%);
+      }
+    }
+  }
+
+	.menu-link {
+		bottom: 4vw;
+
+		@media (max-width: 768px) {
+			bottom: 36px;
+		}
+	}
+}
