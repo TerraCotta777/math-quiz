@@ -44,17 +44,25 @@ const animateDiv = () => {
     targets: ".game__playboard",
     translateX: [
       { value: -window.innerWidth },
-      { value: window.innerWidth},
+      { value: window.innerWidth },
       { value: 0 },
     ],
-    opacity: [
-      { value: "0" },
-      { value: "0" },
-      { value: "1" },
-    ],
+    opacity: [{ value: "0" }, { value: "0" }, { value: "1" }],
     easing: "spring(0, 60, 100, 0)",
   });
 };
+
+const animateScore = (element: string) => {
+  anime({
+    targets: element,
+    translateY: [{ value: 20 }, { value: -20 }],
+    opacity: [{ value: "0" }, { value: "1" }, { value: "0" }],
+    easing: "spring(0, 100, 100, 0)",
+  });
+};
+
+const scorePlus1 = document.querySelector(".win-plus") as HTMLDivElement;
+const scoreMinus1 = document.querySelector(".win-minus") as HTMLDivElement;
 
 let win = 0;
 let example = generateExample();
@@ -66,10 +74,12 @@ result.addEventListener("keydown", (e) => {
       win += 1;
       currentUser.right += 1;
       animateDiv();
+      animateScore(".win-plus");
     } else {
       win -= 1;
       currentUser.wrong += 1;
       animateDiv();
+      animateScore(".win-minus");
     }
     win = win < 0 ? 0 : win;
     currentUser.score = win;

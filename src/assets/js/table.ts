@@ -61,4 +61,8 @@ leaderboardTrigger.forEach((trigger) => {
       easing: "spring(0, 60, 100, 0)",
     });
   });
+
+	if (trigger.value === currentUser.gameMode) {
+		trigger.click();
+	}
 });
