@@ -1,5 +1,7 @@
 // Variables from index page
-export const indexButton = document.querySelector('.index__button') as HTMLAnchorElement;
+export const indexButton = document.querySelector(
+  ".index__button"
+) as HTMLAnchorElement;
 
 // Variables from menu page
 export const alertMessage = document.querySelector(".alert") as HTMLDivElement;
@@ -13,20 +15,26 @@ export const startGameButton = form?.querySelector(
 ) as HTMLButtonElement;
 
 // Variables from rules page
-export const rulesInfo = document.querySelector('.rules__block_mode-info') as HTMLDivElement;
+export const rulesInfo = document.querySelector(
+  ".rules__block_mode-info"
+) as HTMLDivElement;
 
 // Variables from game page
-export const gameContainer = document.querySelector(".game") as HTMLDivElement;
-export const username = document.querySelector(".username") as HTMLDivElement;
+export const gameContainer = document.querySelector(
+  ".game__wrapper"
+) as HTMLDivElement;
+export const username = document.querySelector(
+  ".game__username"
+) as HTMLDivElement;
 export const num1 = document.querySelector(".num-1") as HTMLDivElement;
 export const num2 = document.querySelector(".num-2") as HTMLDivElement;
 export const operator = document.querySelector(".operator") as HTMLDivElement;
 export const result = document.querySelector(".result") as HTMLInputElement;
 export const winElement = document.querySelector(".win") as HTMLDivElement;
 export const stopButton = document.querySelector(
-  ".stopButton"
+  ".stop-button"
 ) as HTMLButtonElement;
-export const clock = document.querySelector(".clock") as HTMLDivElement;
+export const clock = document.querySelector(".game__clock") as HTMLDivElement;
 export const timerCount = document.querySelector(".count") as HTMLSpanElement;
 
 // Variables from end page

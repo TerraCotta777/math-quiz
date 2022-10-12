@@ -31,9 +31,9 @@
     }
   }
 
-	&:focus-visible {
-		outline: none;
-	}
+  &:focus-visible {
+    outline: none;
+  }
 
   &__inner {
     position: relative;
@@ -98,19 +98,59 @@
         top: calc(100% + 4px);
         left: -4px;
         right: -4px;
-        height: 22px;
+        height: 13px;
       }
 
       &::after {
         top: -4px;
         left: calc(100% + 4px);
         bottom: -4px;
-        width: 22px;
+        width: 13px;
       }
     }
 
     &__card {
       padding: 15px 20px;
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .button {
+    &:active,
+    &:hover {
+      transform: translate(3px, 3px);
+
+      .button__inner {
+        &::before {
+          height: 3px;
+        }
+        &::after {
+          width: 3px;
+        }
+      }
+    }
+
+    &__inner {
+      border-width: 3px;
+
+      &::before {
+        top: calc(100% + 3px);
+        left: -3px;
+        right: -3px;
+        height: 4px;
+      }
+
+      &::after {
+        top: -3px;
+        left: calc(100% + 3px);
+        bottom: -3px;
+        width: 4px;
+      }
+    }
+
+    &__card {
+      padding: 10px 15px;
     }
   }
 }

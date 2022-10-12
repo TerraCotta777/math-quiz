@@ -4,129 +4,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz</title>
-    <style>
-      body {
-        margin: 0;
-        color: #444;
-        background: #ecf0f1;
-        font: 300 18px/18px Roboto, sans-serif;
-      }
-
-      .pull-left {
-        float: left;
-      }
-      .pull-right {
-        float: right;
-      }
-      .clearfix:after,
-      .clearfix:before {
-        content: "";
-        display: table;
-      }
-      .clearfix:after {
-        clear: both;
-        display: block;
-      }
-
-      .clock:before,
-      .count:after {
-        content: "";
-        position: absolute;
-      }
-      .clock-wrap {
-        display: none;
-        margin: auto;
-        width: 240px;
-        height: 240px;
-        margin-top: 100px;
-        position: relative;
-        border-radius: 50px;
-        background-color: #fff;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-      }
-			.time-attack .clock-wrap {
-				display: block;
-			}
-      .clock {
-        top: 50%;
-        left: 50%;
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        position: absolute;
-        margin-top: -90px;
-        margin-left: -90px;
-        background-color: #feeff4;
-        background-image: linear-gradient(
-            90deg,
-            rgb(236, 54, 107) 50%,
-            transparent 50%,
-            transparent
-          ),
-          linear-gradient(
-            90deg,
-            rgb(254, 239, 244) 50%,
-            rgb(236, 54, 107) 50%,
-            rgb(236, 54, 107)
-          );
-      }
-      .clock:before {
-        top: 50%;
-        left: 50%;
-        width: 120px;
-        height: 120px;
-        margin-top: -60px;
-        margin-left: -60px;
-        border-radius: inherit;
-        background-color: #ec366b;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.15),
-          0 0 3px rgba(255, 255, 255, 0.75) inset;
-        /*border:1px solid rgba(255,255,255,.1);*/
-      }
-      .count {
-        width: 100%;
-        color: #fff;
-        height: 100%;
-        padding: 50px;
-        font-size: 32px;
-        font-weight: 500;
-        line-height: 50px;
-        position: absolute;
-        text-align: center;
-      }
-      .count:after {
-        content: "sec";
-        width: 100%;
-        display: block;
-        font-size: 18px;
-        font-weight: 300;
-        line-height: 18px;
-        text-align: center;
-        position: relative;
-      }
-    </style>
+    <title>Math Quiz</title>
+		<link rel="icon" type="image/x-icon" href="./assets/img/calculator.png">
   </head>
-  <body>
-    <div class="game">
-      <div class="username">username</div>
-      <div class="clock-wrap">
-        <div class="clock pro-0">
-          <span class="count">90</span>
+  <body class="page game">
+    <video
+      class="video"
+      poster="./assets/img/poster-3.jpeg"
+      autoplay
+      loop
+      muted
+    >
+      <source src="./assets/video/background-img-3.mp4" type="video/mp4" />
+    </video>
+    <main class="game__wrapper">
+      <a class="back-link link" href="javascript:history.back()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20.018" height="18">
+          <path d="M10.018 18v-5h10V5h-10V0L0 8.939 10.018 18z" />
+        </svg>
+        Back
+      </a>
+      <h2 class="game__username">Username</h2>
+      <div class="game__problems white-card">
+        <div class="game__playboard">
+          <div class="game__num num-1">2</div>
+          <div class="game__num operator">+</div>
+          <div class="game__num num-2">4</div>
+          <div class="game__num equal">=</div>
+          <input type="number" class="game__num result white-card" />
+        </div>
+        <div class="game__playboard-footer">
+          <div class="game__clock-wrap">
+            <div class="game__clock pro-0">
+              <span class="count">90</span>
+            </div>
+          </div>
+          <div class="game__score">
+            <div class="win">00</div>
+          </div>
+          <div class="game__stop">
+            <button class="game__button button stop-button">
+              <div class="button__inner">
+                <div class="button__card">Stop</div>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
-      <main>
-        <div class="num-1">2</div>
-        <div class="operator">+</div>
-        <div class="num-2">4</div>
-        <div class="equal">=</div>
-        <input type="number" class="result" />
-      </main>
-      <div class="center">
-        <button class="stopButton">STOP</button>
-        <h3>Score:</h3>
-        <div class="win">0</div>
-      </div>
-    </div>
+    </main>
   </body>
 </html>

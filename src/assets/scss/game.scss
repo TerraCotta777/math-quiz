@@ -1,0 +1,228 @@
+.game {
+  @media (max-width: 768px) {
+    font-size: 1.5vw;
+  }
+
+  &__wrapper {
+    justify-content: center;
+  }
+
+  &__username {
+    margin-bottom: 2vw;
+    text-shadow: 6px 6px 0 #000;
+    -webkit-text-stroke: 1px #000;
+    font-size: 300%;
+    color: #fff;
+
+		@media (max-width: 576px) {
+      margin-bottom: 10vw;
+			font-size: 500%;
+    }
+  }
+
+  &__problems {
+    width: 80vw;
+    height: 38vw;
+    display: flex;
+    flex-direction: column;
+		overflow: hidden;
+
+    @media (max-width: 992px) {
+      height: 50vw;
+    }
+		
+		@media (max-width: 576px) {
+      height: 90vw;
+    }
+  }
+
+  &__playboard {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+		@media (max-width: 576px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__num {
+    font-size: 600%;
+  }
+
+  &__num.result {
+    width: 30%;
+		font-family: inherit;
+
+		@media (max-width: 576px) {
+      width: 50%;
+			margin-bottom: 3vw;
+    }
+  }
+
+	.equal {
+		@media (max-width: 576px) {
+      width: 100%;
+    }
+	}
+
+  &__playboard-footer {
+    border-top: 3px solid;
+    min-height: 120px;
+    display: flex;
+    background-color: #69e5ab;
+
+		@media (max-width: 768px) {
+			min-height: 90px;
+		}
+
+		@media (max-width: 440px) {
+      min-height: 70px;
+    }
+  }
+
+  .clock:before,
+  .count:after {
+    content: "";
+    position: absolute;
+  }
+  &__clock-wrap {
+    display: none;
+		flex-shrink: 0;
+    // margin: auto;
+    height: 100%;
+
+    width: 120px;
+    // margin-top: 100px;
+    border-right: 3px solid;
+    position: relative;
+    // border-radius: 50px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+
+		@media (max-width: 768px) {
+			width: 90px;
+		}
+
+		@media (max-width: 440px) {
+      width: 70px;
+    }
+  }
+
+  .time-attack .game__clock-wrap {
+    display: block;
+  }
+
+  &__clock {
+    // top: 50%;
+    // left: 50%;
+    width: 90%;
+    margin: 5%;
+    height: 90%;
+    border-radius: 50%;
+    // position: absolute;
+    // margin-top: -90px;
+    // margin-left: -90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #feeff4;
+    background-image: linear-gradient(
+        90deg,
+        rgb(236, 54, 107) 50%,
+        transparent 50%,
+        transparent
+      ),
+      linear-gradient(
+        90deg,
+        rgb(254, 239, 244) 50%,
+        rgb(236, 54, 107) 50%,
+        rgb(236, 54, 107)
+      );
+  }
+  &__clock:before {
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    margin-top: -60px;
+    margin-left: -60px;
+    border-radius: inherit;
+    background-color: #ec366b;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15),
+      0 0 3px rgba(255, 255, 255, 0.75) inset;
+    /*border:1px solid rgba(255,255,255,.1);*/
+  }
+  .count {
+    width: 100%;
+    margin-bottom: 15px;
+    // color: #fff;
+    // height: 100%;
+    // padding: 50px;
+    font-size: 170%;
+    // font-weight: 500;
+    // line-height: 50px;
+    // position: absolute;
+    // text-align: center;
+    // text-shadow: 3px 3px 0 #000;
+    -webkit-text-stroke: 2px #000;
+    color: #fff;
+
+		@media (max-width: 768px) {
+			display: none;
+		}
+  }
+
+  &__score {
+    // width: auto;
+    height: 90%;
+    margin: 6px 20px;
+    flex-grow: 1;
+
+		@media (max-width: 576px) {
+      margin: 3px;
+    }
+  }
+
+  .win {
+    width: calc(120px * 0.9);
+    height: 100%;
+    text-shadow: 3px 3px 0 #000;
+    -webkit-text-stroke: 2px #000;
+    color: #fff;
+    font-size: 65px;
+    background-color: #fff;
+    border-radius: 50%;
+
+		@media (max-width: 768px) {
+			width: calc(90px * 0.9);
+			font-size: 50px;
+		}
+
+		@media (max-width: 440px) {
+      width: calc(70px * 0.9);
+			font-size: 39px;
+    }
+  }
+
+  &__stop {
+    justify-self: flex-end;
+  }
+
+  &__button {
+    margin: 10px;
+    background: transparent;
+    border: 0;
+    font-family: inherit;
+
+    .button__card {
+      font-size: 34px;
+
+			@media (max-width: 768px) {
+				font-size: 25px;
+				line-height: 20px;
+			}
+    }
+  }
+}

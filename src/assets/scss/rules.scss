@@ -81,6 +81,20 @@
 		}
 	}
 
+	.game__num {
+		font-size: 300%;
+
+		@media (max-width: 576px) {
+      font-size: 200%;
+    }
+	}
+
+	.game__num.result {
+		@media (max-width: 576px) {
+      width: 20%;
+    }
+	}
+
 	&__button {
 		margin: 2vw 0 0 0;
 		align-self: flex-end;

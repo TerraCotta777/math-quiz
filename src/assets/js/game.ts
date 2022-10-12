@@ -1,3 +1,4 @@
+import anime from "animejs";
 import "../scss/main.scss";
 import { generateExample } from "./math";
 import {
@@ -39,6 +40,23 @@ const renderExample = (data: any) => {
   result.focus();
 };
 
+const animateDiv = () => {
+  anime({
+    targets: ".game__playboard",
+    translateX: [
+      { value: -window.innerWidth },
+      { value: window.innerWidth},
+      { value: 0 },
+    ],
+    opacity: [
+      { value: "0" },
+      { value: "0" },
+      { value: "1" },
+    ],
+    easing: "spring(0, 60, 100, 0)",
+  });
+};
+
 let win = 0;
 let example = generateExample();
 renderExample(example);
@@ -48,9 +66,11 @@ result.addEventListener("keydown", (e) => {
     if (Number(result.value) === Number(example.result)) {
       win += 1;
       currentUser.right += 1;
+      animateDiv();
     } else {
       win -= 1;
       currentUser.wrong += 1;
+      animateDiv();
     }
     win = win < 0 ? 0 : win;
     currentUser.score = win;
