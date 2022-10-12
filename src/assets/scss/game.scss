@@ -14,9 +14,9 @@
     font-size: 300%;
     color: #fff;
 
-		@media (max-width: 576px) {
+    @media (max-width: 576px) {
       margin-bottom: 10vw;
-			font-size: 500%;
+      font-size: 500%;
     }
   }
 
@@ -25,13 +25,13 @@
     height: 38vw;
     display: flex;
     flex-direction: column;
-		overflow: hidden;
+    overflow: hidden;
 
     @media (max-width: 992px) {
       height: 50vw;
     }
-		
-		@media (max-width: 576px) {
+
+    @media (max-width: 576px) {
       height: 90vw;
     }
   }
@@ -42,7 +42,7 @@
     justify-content: space-around;
     align-items: center;
 
-		@media (max-width: 576px) {
+    @media (max-width: 576px) {
       flex-wrap: wrap;
     }
   }
@@ -53,19 +53,19 @@
 
   &__num.result {
     width: 30%;
-		font-family: inherit;
+    font-family: inherit;
 
-		@media (max-width: 576px) {
+    @media (max-width: 576px) {
       width: 50%;
-			margin-bottom: 3vw;
+      margin-bottom: 3vw;
     }
   }
 
-	.equal {
-		@media (max-width: 576px) {
+  .equal {
+    @media (max-width: 576px) {
       width: 100%;
     }
-	}
+  }
 
   &__playboard-footer {
     border-top: 3px solid;
@@ -73,11 +73,11 @@
     display: flex;
     background-color: #69e5ab;
 
-		@media (max-width: 768px) {
-			min-height: 90px;
-		}
+    @media (max-width: 768px) {
+      min-height: 90px;
+    }
 
-		@media (max-width: 440px) {
+    @media (max-width: 440px) {
       min-height: 70px;
     }
   }
@@ -89,23 +89,20 @@
   }
   &__clock-wrap {
     display: none;
-		flex-shrink: 0;
-    // margin: auto;
+    flex-shrink: 0;
     height: 100%;
 
     width: 120px;
-    // margin-top: 100px;
     border-right: 3px solid;
     position: relative;
-    // border-radius: 50px;
     background-color: #fff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 
-		@media (max-width: 768px) {
-			width: 90px;
-		}
+    @media (max-width: 768px) {
+      width: 90px;
+    }
 
-		@media (max-width: 440px) {
+    @media (max-width: 440px) {
       width: 70px;
     }
   }
@@ -115,15 +112,10 @@
   }
 
   &__clock {
-    // top: 50%;
-    // left: 50%;
     width: 90%;
     margin: 5%;
     height: 90%;
     border-radius: 50%;
-    // position: absolute;
-    // margin-top: -90px;
-    // margin-left: -90px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -152,35 +144,26 @@
     background-color: #ec366b;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15),
       0 0 3px rgba(255, 255, 255, 0.75) inset;
-    /*border:1px solid rgba(255,255,255,.1);*/
   }
   .count {
     width: 100%;
     margin-bottom: 15px;
-    // color: #fff;
-    // height: 100%;
-    // padding: 50px;
     font-size: 170%;
-    // font-weight: 500;
-    // line-height: 50px;
-    // position: absolute;
-    // text-align: center;
-    // text-shadow: 3px 3px 0 #000;
     -webkit-text-stroke: 2px #000;
     color: #fff;
 
-		@media (max-width: 768px) {
-			display: none;
-		}
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   &__score {
-    // width: auto;
     height: 90%;
     margin: 6px 20px;
+    display: flex;
     flex-grow: 1;
 
-		@media (max-width: 576px) {
+    @media (max-width: 576px) {
       margin: 3px;
     }
   }
@@ -195,14 +178,43 @@
     background-color: #fff;
     border-radius: 50%;
 
-		@media (max-width: 768px) {
-			width: calc(90px * 0.9);
-			font-size: 50px;
-		}
+    &__update {
+			position: relative;
+      text-shadow: 3px 3px 0 #000;
+      -webkit-text-stroke: 2px #000;
+      color: #fff;
+      font-size: 65px;
 
-		@media (max-width: 440px) {
+			div {
+				position: absolute;
+				opacity: 0;
+			}
+    }
+
+    &-plus {
+      color: #fff;
+    }
+
+    &-minus {
+      color: #f75c5c;
+    }
+
+    @media (max-width: 768px) {
+      width: calc(90px * 0.9);
+      font-size: 50px;
+			
+			&__update {
+				font-size: 50px;
+			}
+    }
+
+    @media (max-width: 440px) {
       width: calc(70px * 0.9);
-			font-size: 39px;
+      font-size: 39px;
+
+			&__update {
+				font-size: 39px;
+			}
     }
   }
 
@@ -219,10 +231,10 @@
     .button__card {
       font-size: 34px;
 
-			@media (max-width: 768px) {
-				font-size: 25px;
-				line-height: 20px;
-			}
+      @media (max-width: 768px) {
+        font-size: 25px;
+        line-height: 20px;
+      }
     }
   }
 }

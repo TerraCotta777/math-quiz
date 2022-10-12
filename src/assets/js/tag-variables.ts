@@ -46,9 +46,12 @@ export const usernameEndPage = document.querySelector(
 ) as HTMLSpanElement;
 
 // Variables from table page
+export const leaderboardTrigger = document.querySelectorAll(
+  ".table__subtitle"
+) as NodeListOf<HTMLButtonElement>;
 export const practiceList = document.querySelector(
-  ".practice-leaders"
+  ".table__practice"
 ) as HTMLUListElement;
 export const timeAttackList = document.querySelector(
-  ".time-attack-leaders"
+  ".table__time-attack"
 ) as HTMLUListElement;
