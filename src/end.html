@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>End</title>
-</head>
-<body>
-	<p>Общий счет</p>
-	<p><span>8 правильных</span> <span>2 неправильных</span> ответа</p>
-	<a href="./table.html">Таблица лидеров</a>
-	<a href="./game.html">Попробовать еще раз</a>
-	<a href="./index.html">Главное меню</a>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Quiz | Game over</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/calculator.png" />
+  </head>
+  <body class="page end">
+    <main class="end__wrapper">
+      <h1 class="end__title">
+        Total score: <br />
+        <span class="score">0</span>
+      </h1>
+      <div class="end__info">
+        <h3 class="end__subtitle username-end-page">Username</h3>
+        <p class="end__answers">
+          You have <span class="right">8</span> right and
+          <span class="wrong">2</span> wrong answers
+        </p>
+      </div>
+      <a href="./game.html" class="end__button button">
+        <div class="button__inner">
+          <div class="button__card">Try again</div>
+        </div>
+      </a>
+
+      <a class="leaderboard-link end__leaderboard-link link" href="./table.html"
+        >Leaderboard
+        <svg xmlns="http://www.w3.org/2000/svg" width="19.99" height="18">
+          <path d="M10.029 5H0v7.967h10.029V18l9.961-9.048L10.029 0v5z" />
+        </svg>
+      </a>
+      <a class="menu-link end__menu-link link" href="./menu.html"
+        >Menu
+        <svg xmlns="http://www.w3.org/2000/svg" width="19.99" height="18">
+          <path d="M10.029 5H0v7.967h10.029V18l9.961-9.048L10.029 0v5z" />
+        </svg>
+      </a>
+    </main>
+  </body>
 </html>

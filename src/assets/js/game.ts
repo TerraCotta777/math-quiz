@@ -1,48 +1,87 @@
+import anime from "animejs";
 import "../scss/main.scss";
+import { generateExample } from "./math";
+import {
+  username,
+  num1,
+  num2,
+  operator,
+  result,
+  winElement,
+  stopButton,
+} from "./tag-variables";
+import { timerFunc } from "./timer";
+import { Leaders, User } from "./types";
+import { stopGame, updateLeaderBoard } from "./utils";
 
-const num1 = document.querySelector('.num-1')
-const num2 = document.querySelector('.num-2')
-const operator = document.querySelector('.operator')
-const result = document.querySelector('.result')
-const goBtn = document.querySelector('#go')
-const winElement = document.querySelector('.win')
+export const currentUser: User = JSON.parse(
+  localStorage.getItem("currentUser")!
+);
+!localStorage.getItem("leaders") &&
+  localStorage.setItem(
+    "leaders",
+    JSON.stringify({ practice: {}, "time-attack": {} })
+  );
 
-// const getRandom = (min, max) => {
-//   return Math.round(Math.random() * (max - min) + min)
-// }
+currentUser.right = 0;
+currentUser.wrong = 0;
+currentUser.score = 0;
+localStorage.setItem("currentUser", JSON.stringify(currentUser));
 
-// const operators = ['+', '-', '*']
+timerFunc();
 
-// const sum = (a, b, operator) => {
-//   if (operator === '+') return a + b
-//   if (operator === '-') return a - b
-//   return a * b
-// }
+username.textContent = currentUser.username ? currentUser.username : "Username";
 
-// const generateExample = () => {
-//   const num1 = getRandom(1, 10)
-//   const num2 = getRandom(1, 10)
-//   const operator = operators[getRandom(0, 2)]
-//   const result = sum(num1, num2, operator)
+const renderExample = (data: any) => {
+  num1.textContent = data.num1;
+  num2.textContent = data.num2;
+  operator.textContent = data.operator;
+  console.log(data.num1, data.num2, data.result);
+  result.focus();
+};
 
-//   return { num1, num2, operator, result }
-// }
+const animateDiv = () => {
+  anime({
+    targets: ".game__playboard",
+    translateX: [
+      { value: -window.innerWidth },
+      { value: window.innerWidth},
+      { value: 0 },
+    ],
+    opacity: [
+      { value: "0" },
+      { value: "0" },
+      { value: "1" },
+    ],
+    easing: "spring(0, 60, 100, 0)",
+  });
+};
 
-// const renderExample = (data) => {
-//   num1.textContent = data.num1
-//   num2.textContent = data.num2
-//   operator.textContent = data.operator
-// }
+let win = 0;
+let example = generateExample();
+renderExample(example);
 
-// let win = 0
-// let example = generateExample()
-// renderExample(example)
+result.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    if (Number(result.value) === Number(example.result)) {
+      win += 1;
+      currentUser.right += 1;
+      animateDiv();
+    } else {
+      win -= 1;
+      currentUser.wrong += 1;
+      animateDiv();
+    }
+    win = win < 0 ? 0 : win;
+    currentUser.score = win;
+    winElement.textContent = String(win);
+    localStorage.setItem("currentUser", JSON.stringify(currentUser));
+    const leaders = updateLeaderBoard();
+    localStorage.setItem("leaders", JSON.stringify(leaders));
+    result.value = "";
+    example = generateExample();
+    renderExample(example);
+  }
+});
 
-// goBtn.addEventListener('click', () => {
-//   if (!result.value && result.value !== 0) return
-//   win += Number(result.value) === Number(example.result) ? 1 : -1
-//   winElement.textContent = win
-//   result.value = ''
-//   example = generateExample()
-//   renderExample(example)
-// })
+stopButton.addEventListener("click", () => stopGame());

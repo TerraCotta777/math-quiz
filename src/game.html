@@ -4,23 +4,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz</title>
+    <title>Math Quiz</title>
+		<link rel="icon" type="image/x-icon" href="./assets/img/calculator.png">
   </head>
-  <body>
-    <div>username</div>
-    <div>Timer</div>
-    <main>
-      <div class="num-1">2</div>
-      <div class="operator">+</div>
-      <div class="num-2">4</div>
-      <div class="equal">=</div>
-      <input type="number" class="result" />
+  <body class="page game">
+    <video
+      class="video"
+      poster="./assets/img/poster-3.jpeg"
+      autoplay
+      loop
+      muted
+    >
+      <source src="./assets/video/background-img-3.mp4" type="video/mp4" />
+    </video>
+    <main class="game__wrapper">
+      <a class="back-link link" href="javascript:history.back()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20.018" height="18">
+          <path d="M10.018 18v-5h10V5h-10V0L0 8.939 10.018 18z" />
+        </svg>
+        Back
+      </a>
+      <h2 class="game__username">Username</h2>
+      <div class="game__problems white-card">
+        <div class="game__playboard">
+          <div class="game__num num-1">2</div>
+          <div class="game__num operator">+</div>
+          <div class="game__num num-2">4</div>
+          <div class="game__num equal">=</div>
+          <input type="number" class="game__num result white-card" />
+        </div>
+        <div class="game__playboard-footer">
+          <div class="game__clock-wrap">
+            <div class="game__clock pro-0">
+              <span class="count">90</span>
+            </div>
+          </div>
+          <div class="game__score">
+            <div class="win">00</div>
+          </div>
+          <div class="game__stop">
+            <button class="game__button button stop-button">
+              <div class="button__inner">
+                <div class="button__card">Stop</div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
     </main>
-    <div class="center">
-      <button id="go">GO</button>
-      <button>STOP</button>
-      <h3>Score:</h3>
-      <div class="win">0</div>
-    </div>
   </body>
 </html>

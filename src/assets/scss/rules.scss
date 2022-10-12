@@ -1,0 +1,106 @@
+.rules {
+	background-color: #69e5ab;
+
+  &__wrapper {
+		padding: 2vw;
+    justify-content: center;
+  }
+
+  &__title {
+		margin-bottom: 2vw;
+		align-self: flex-start;
+    text-shadow: 6px 6px 0 #000;
+    -webkit-text-stroke: 1px #000;
+    font-size: 450%;
+    color: #fff;
+    text-align: left;
+
+		@media (max-width: 768px) {
+			width: 80%;
+			font-size: 300%;
+			align-self: center;
+		}
+
+		@media (max-width: 576px) {
+      font-size: 200%;
+			text-shadow: 5px 4px 0 #000;
+    }
+  }
+
+  &__inner {
+		width: 100%;
+    display: flex;
+		justify-content: space-between;
+
+		@media (max-width: 768px) {
+			width: 80%;
+			display: block;
+		}
+  }
+
+	&__info {
+		width: 35%;
+
+		@media (max-width: 768px) {
+			width: 100%;
+			margin-bottom: 4vw;
+		}
+	}
+
+	&__block {
+		margin-bottom: 1vw;
+	}
+
+	&__subtitle {
+		font-size: 150%;
+
+		@media (max-width: 576px) {
+      font-size: 130%;
+    }
+	}
+
+	&__rule {
+		opacity: 0.5;
+		font-size: 90%;
+		font-family: 'Nunito Sans', sans-serif;
+	}
+
+	.rules__img {
+		margin-right: 1vw;
+		width: 50%;
+		background-color: #ffe945;
+
+		@media (max-width: 768px) {
+			margin: 0 auto 2vw;
+			width: 100%;
+			height: 200px;
+		}
+
+		@media (max-width: 576px) {
+			height: 150px;
+		}
+	}
+
+	.game__num {
+		font-size: 300%;
+
+		@media (max-width: 576px) {
+      font-size: 200%;
+    }
+	}
+
+	.game__num.result {
+		@media (max-width: 576px) {
+      width: 20%;
+    }
+	}
+
+	&__button {
+		margin: 2vw 0 0 0;
+		align-self: flex-end;
+
+		@media (max-width: 768px) {
+			align-self: center;
+		}
+	}
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Quiz | Menu</title>
+		<link rel="icon" type="image/x-icon" href="./assets/img/calculator.png">
+  </head>
+  <body class="page menu">
+    <video class="video" poster="./assets/img/poster.jpeg" autoplay loop muted>
+      <source src="./assets/video/background-img.mp4" type="video/mp4" />
+    </video>
+    <main class="menu__wrapper">
+      <a class="back-link link" href="javascript:history.back()"
+        ><svg xmlns="http://www.w3.org/2000/svg" width="20.018" height="18">
+          <path d="M10.018 18v-5h10V5h-10V0L0 8.939 10.018 18z" /></svg>Back</a>
+      <form class="menu__form">
+        <p class="alert">Please provide your name</p>
+        <div class="form__name white-card">
+          <input
+            class="form__name-input"
+            type="text"
+            id="nameInput"
+            placeholder="Name"
+          />
+        </div>
+        <div class="menu__game-modes">
+          <button
+            type="submit"
+            value="practice"
+            class="menu__game-mode white-card"
+          >
+            <span class="menu__game-mode-name">Practice</span>
+            <img
+              class="menu__img"
+              src="./assets/img/green-monster.svg"
+              alt="monster"
+            />
+            <div class="menu__go-button">Go!</div>
+          </button>
+          <button
+            type="submit"
+            value="time-attack"
+            class="menu__game-mode white-card"
+          >
+            <span class="menu__game-mode-name">Time Attack</span>
+            <img
+              class="menu__img"
+              src="./assets/img/red-monster.svg"
+              alt="monster"
+            />
+            <div class="menu__go-button">Go!</div>
+          </button>
+        </div>
+      </form>
+
+      <a
+        class="leaderboard-link menu__leaderboard-link link"
+        href="./table.html"
+        >Leaderboard
+        <svg xmlns="http://www.w3.org/2000/svg" width="19.99" height="18">
+          <path d="M10.029 5H0v7.967h10.029V18l9.961-9.048L10.029 0v5z" />
+        </svg>
+      </a>
+    </main>
+  </body>
+</html>
